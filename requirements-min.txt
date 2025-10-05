@@ -1,0 +1,23 @@
+# Minimal requirements - install these first
+# Then optionally install XGBoost and LightGBM later
+
+# Core Dependencies
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.5.0
+
+# API Framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.12
+pydantic>=2.9.0
+
+# Data Processing
+joblib>=1.4.0
+
+# Visualization
+matplotlib>=3.9.0
+seaborn>=0.13.0
+
+# Utilities
+python-dotenv>=1.0.0
