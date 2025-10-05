@@ -1,0 +1,24 @@
+Defaulting to user installation because normal site-packages is not writeable
+Collecting optuna
+  Downloading optuna-4.5.0-py3-none-any.whl.metadata (17 kB)
+Collecting alembic>=1.5.0 (from optuna)
+  Downloading alembic-1.16.5-py3-none-any.whl.metadata (7.3 kB)
+Collecting colorlog (from optuna)
+  Downloading colorlog-6.9.0-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: numpy in /home/harrypotter/.local/lib/python3.12/site-packages (from optuna) (1.26.4)
+Requirement already satisfied: packaging>=20.0 in /home/harrypotter/.local/lib/python3.12/site-packages (from optuna) (25.0)
+Requirement already satisfied: sqlalchemy>=1.4.2 in /home/harrypotter/.local/lib/python3.12/site-packages (from optuna) (2.0.43)
+Requirement already satisfied: tqdm in /home/harrypotter/.local/lib/python3.12/site-packages (from optuna) (4.67.1)
+Requirement already satisfied: PyYAML in /home/harrypotter/.local/lib/python3.12/site-packages (from optuna) (6.0.2)
+Collecting Mako (from alembic>=1.5.0->optuna)
+  Downloading mako-1.3.10-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: typing-extensions>=4.12 in /home/harrypotter/.local/lib/python3.12/site-packages (from alembic>=1.5.0->optuna) (4.15.0)
+Requirement already satisfied: greenlet>=1 in /home/harrypotter/.local/lib/python3.12/site-packages (from sqlalchemy>=1.4.2->optuna) (3.2.4)
+Requirement already satisfied: MarkupSafe>=0.9.2 in /home/harrypotter/.local/lib/python3.12/site-packages (from Mako->alembic>=1.5.0->optuna) (3.0.2)
+Downloading optuna-4.5.0-py3-none-any.whl (400 kB)
+Downloading alembic-1.16.5-py3-none-any.whl (247 kB)
+Downloading colorlog-6.9.0-py3-none-any.whl (11 kB)
+Downloading mako-1.3.10-py3-none-any.whl (78 kB)
+Installing collected packages: Mako, colorlog, alembic, optuna
+
+Successfully installed Mako-1.3.10 alembic-1.16.5 colorlog-6.9.0 optuna-4.5.0

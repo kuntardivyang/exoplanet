@@ -1,0 +1,37 @@
+Defaulting to user installation because normal site-packages is not writeable
+Collecting ray[tune]
+  Downloading ray-2.49.2-cp312-cp312-manylinux2014_x86_64.whl.metadata (21 kB)
+Requirement already satisfied: click>=7.0 in /usr/lib/python3/dist-packages (from ray[tune]) (8.1.6)
+Requirement already satisfied: filelock in /home/harrypotter/.local/lib/python3.12/site-packages (from ray[tune]) (3.19.1)
+Requirement already satisfied: jsonschema in /home/harrypotter/.local/lib/python3.12/site-packages (from ray[tune]) (4.25.1)
+Collecting msgpack<2.0.0,>=1.0.0 (from ray[tune])
+  Downloading msgpack-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.4 kB)
+Requirement already satisfied: packaging in /home/harrypotter/.local/lib/python3.12/site-packages (from ray[tune]) (25.0)
+Requirement already satisfied: protobuf>=3.20.3 in /home/harrypotter/.local/lib/python3.12/site-packages (from ray[tune]) (6.32.0)
+Requirement already satisfied: pyyaml in /home/harrypotter/.local/lib/python3.12/site-packages (from ray[tune]) (6.0.2)
+Requirement already satisfied: requests in /home/harrypotter/.local/lib/python3.12/site-packages (from ray[tune]) (2.32.5)
+Requirement already satisfied: pandas in /home/harrypotter/.local/lib/python3.12/site-packages (from ray[tune]) (2.2.2)
+Collecting tensorboardX>=1.9 (from ray[tune])
+  Downloading tensorboardx-2.6.4-py3-none-any.whl.metadata (6.2 kB)
+Requirement already satisfied: pyarrow>=9.0.0 in /home/harrypotter/.local/lib/python3.12/site-packages (from ray[tune]) (21.0.0)
+Requirement already satisfied: fsspec in /home/harrypotter/.local/lib/python3.12/site-packages (from ray[tune]) (2025.7.0)
+Requirement already satisfied: numpy in /home/harrypotter/.local/lib/python3.12/site-packages (from tensorboardX>=1.9->ray[tune]) (1.26.4)
+Requirement already satisfied: attrs>=22.2.0 in /usr/lib/python3/dist-packages (from jsonschema->ray[tune]) (23.2.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/harrypotter/.local/lib/python3.12/site-packages (from jsonschema->ray[tune]) (2025.4.1)
+Requirement already satisfied: referencing>=0.28.4 in /home/harrypotter/.local/lib/python3.12/site-packages (from jsonschema->ray[tune]) (0.36.2)
+Requirement already satisfied: rpds-py>=0.7.1 in /home/harrypotter/.local/lib/python3.12/site-packages (from jsonschema->ray[tune]) (0.27.0)
+Requirement already satisfied: typing-extensions>=4.4.0 in /home/harrypotter/.local/lib/python3.12/site-packages (from referencing>=0.28.4->jsonschema->ray[tune]) (4.15.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/lib/python3/dist-packages (from pandas->ray[tune]) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /usr/lib/python3/dist-packages (from pandas->ray[tune]) (2024.1)
+Requirement already satisfied: tzdata>=2022.7 in /home/harrypotter/.local/lib/python3.12/site-packages (from pandas->ray[tune]) (2025.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in /home/harrypotter/.local/lib/python3.12/site-packages (from requests->ray[tune]) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in /home/harrypotter/.local/lib/python3.12/site-packages (from requests->ray[tune]) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/harrypotter/.local/lib/python3.12/site-packages (from requests->ray[tune]) (1.26.20)
+Requirement already satisfied: certifi>=2017.4.17 in /home/harrypotter/.local/lib/python3.12/site-packages (from requests->ray[tune]) (2025.8.3)
+Downloading ray-2.49.2-cp312-cp312-manylinux2014_x86_64.whl (70.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.1/70.1 MB 5.7 MB/s  0:00:12
+Downloading msgpack-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (426 kB)
+Downloading tensorboardx-2.6.4-py3-none-any.whl (87 kB)
+Installing collected packages: tensorboardX, msgpack, ray
+
+Successfully installed msgpack-1.1.1 ray-2.49.2 tensorboardX-2.6.4

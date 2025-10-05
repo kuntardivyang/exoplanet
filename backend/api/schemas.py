@@ -101,3 +101,41 @@ class FileUploadResponse(BaseModel):
     rows: int
     predictions: List[PredictionResponse]
     timestamp: datetime = Field(default_factory=datetime.now)
+
+
+# Chat/LLM Schemas
+class ChatMessage(BaseModel):
+    """Chat message schema"""
+    role: str = Field(..., description="Message role: user or assistant")
+    content: str = Field(..., description="Message content")
+    timestamp: Optional[datetime] = Field(default_factory=datetime.now)
+
+
+class ChatRequest(BaseModel):
+    """Chat request schema"""
+    message: str = Field(..., description="User message")
+    conversation_id: Optional[str] = Field(None, description="Conversation ID for context")
+    include_context: bool = Field(True, description="Whether to use RAG context")
+    n_context: int = Field(3, description="Number of context documents to retrieve")
+
+
+class ChatResponse(BaseModel):
+    """Chat response schema"""
+    answer: str = Field(..., description="Assistant's answer")
+    sources: List[Dict] = Field(default=[], description="Retrieved context sources")
+    suggestions: List[str] = Field(default=[], description="Follow-up question suggestions")
+    conversation_id: Optional[str] = None
+    timestamp: datetime = Field(default_factory=datetime.now)
+
+
+class ExplainPredictionRequest(BaseModel):
+    """Request to explain a prediction"""
+    prediction: Dict = Field(..., description="Prediction result to explain")
+    features: Optional[Dict] = Field(None, description="Input features used")
+
+
+class CompareRequest(BaseModel):
+    """Request to compare datasets or objects"""
+    item1: str = Field(..., description="First item to compare")
+    item2: str = Field(..., description="Second item to compare")
+    comparison_type: str = Field("datasets", description="Type: datasets, models, or objects")

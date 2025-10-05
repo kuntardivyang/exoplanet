@@ -1,6 +1,11 @@
 """
 FastAPI backend for Exoplanet Detection System
 """
+import os
+# Fix Keras 3 compatibility issue for sentence-transformers
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ['KERAS_BACKEND'] = 'jax'
+
 from fastapi import FastAPI, HTTPException, UploadFile, File, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, FileResponse
@@ -34,7 +39,7 @@ logger = setup_logger(__name__)
 # Initialize FastAPI app
 app = FastAPI(
     title="Exoplanet Detection API",
-    description="AI-powered exoplanet detection and classification system",
+    description="AI-powered exoplanet detection and classification system with AI Chat Assistant",
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
@@ -48,6 +53,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include chat routes
+try:
+    from backend.api.chat_routes import router as chat_router
+    app.include_router(chat_router)
+    logger.info("Chat routes included")
+except Exception as e:
+    logger.warning(f"Could not include chat routes: {e}")
 
 # Global predictor instance
 predictor: Optional[ExoplanetPredictor] = None
@@ -452,6 +465,40 @@ async def get_dataset_sample(dataset_name: str, n: int = 10):
         raise
     except Exception as e:
         logger.error(f"Error getting dataset sample: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/predict/example")
+async def get_prediction_example():
+    """Get an example input for making predictions"""
+    try:
+        # Return a realistic example from Kepler data
+        example = {
+            "koi_period": 3.52474859,
+            "koi_time0bk": 170.538750,
+            "koi_impact": 0.146,
+            "koi_duration": 2.95750,
+            "koi_depth": 2500.0,
+            "koi_prad": 2.26,
+            "koi_teq": 1370.0,
+            "koi_insol": 93.59,
+            "koi_model_snr": 35.8,
+            "koi_steff": 6200.0,
+            "koi_slogg": 4.18,
+            "koi_srad": 1.793
+        }
+
+        return {
+            "example": example,
+            "note": "You can provide any subset of features. Missing features will be imputed automatically.",
+            "recommended_features": [
+                "koi_period", "koi_duration", "koi_depth", "koi_prad",
+                "koi_teq", "koi_insol", "koi_model_snr",
+                "koi_steff", "koi_slogg", "koi_srad"
+            ]
+        }
+    except Exception as e:
+        logger.error(f"Error getting example: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 

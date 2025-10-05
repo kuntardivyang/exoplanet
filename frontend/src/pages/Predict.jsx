@@ -13,7 +13,9 @@ function Predict() {
 
   const exampleFeatures = [
     'koi_period', 'koi_duration', 'koi_depth', 'koi_prad',
-    'koi_teq', 'koi_steff', 'koi_slogg', 'koi_srad',
+    'koi_teq', 'koi_insol', 'koi_model_snr',
+    'koi_steff', 'koi_slogg', 'koi_srad',
+    'koi_impact', 'koi_score'
   ];
 
   const handleSinglePredict = async () => {
@@ -229,7 +231,38 @@ function Predict() {
       {/* Single Prediction */}
       {activeTab === 'single' && (
         <div className="card">
-          <h2 className="text-xl font-bold mb-4">Enter Feature Values</h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-bold">Enter Feature Values</h2>
+            <button
+              onClick={() => {
+                // Load example hot Jupiter
+                setSingleFeatures({
+                  koi_period: 3.52,
+                  koi_duration: 2.96,
+                  koi_depth: 2500,
+                  koi_prad: 2.26,
+                  koi_teq: 1370,
+                  koi_insol: 93.59,
+                  koi_model_snr: 35.8,
+                  koi_steff: 6200,
+                  koi_slogg: 4.18,
+                  koi_srad: 1.79,
+                  koi_impact: 0.15,
+                  koi_score: 0.98
+                });
+              }}
+              className="btn-secondary text-sm"
+            >
+              Load Example (Hot Jupiter)
+            </button>
+          </div>
+
+          <div className="mb-4 p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg">
+            <p className="text-sm text-blue-400">
+              💡 <strong>Tip:</strong> Fill in the values you know. Missing features will be automatically imputed.
+              More features = better accuracy!
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             {exampleFeatures.map((feature) => (
               <div key={feature}>
@@ -239,20 +272,44 @@ function Predict() {
                   step="any"
                   className="input w-full"
                   value={singleFeatures[feature] || ''}
-                  onChange={(e) =>
-                    setSingleFeatures({ ...singleFeatures, [feature]: parseFloat(e.target.value) || 0 })
-                  }
-                  placeholder="0.0"
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (value === '' || value === null) {
+                      // Remove the feature if empty
+                      const updated = { ...singleFeatures };
+                      delete updated[feature];
+                      setSingleFeatures(updated);
+                    } else {
+                      // Set the parsed value
+                      setSingleFeatures({
+                        ...singleFeatures,
+                        [feature]: parseFloat(value)
+                      });
+                    }
+                  }}
+                  placeholder="Enter value (optional)"
                 />
               </div>
             ))}
           </div>
+
+          <div className="mb-4 p-4 bg-dark-700 rounded-lg">
+            <p className="text-sm text-gray-400">
+              <strong>Filled features:</strong> {Object.keys(singleFeatures).length} / {exampleFeatures.length}
+            </p>
+            {Object.keys(singleFeatures).length > 0 && (
+              <p className="text-xs text-gray-500 mt-2">
+                {Object.entries(singleFeatures).map(([k, v]) => `${k}: ${v}`).join(', ')}
+              </p>
+            )}
+          </div>
+
           <button
             onClick={handleSinglePredict}
             disabled={loading || Object.keys(singleFeatures).length === 0}
             className="btn-primary w-full"
           >
-            {loading ? 'Predicting...' : 'Predict'}
+            {loading ? 'Predicting...' : `Predict (${Object.keys(singleFeatures).length} features)`}
           </button>
         </div>
       )}

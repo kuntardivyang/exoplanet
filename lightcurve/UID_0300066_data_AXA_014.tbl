@@ -1,0 +1,231 @@
+\ ******************************************************************************
+\"GLOBAL PROPERTIES"
+\ ******************************************************************************
+\STAR_ID = "WASP10"
+\STAR_ID_DEFINED = "Published Star Name or ID Number of Star Assigned by Survey"
+\DATA_CATEGORY = "AXA Light Curve"
+\DATA_CATEGORY_DEFINED = "Category of Time Series Data"
+\PUBLIC = "Y"
+\PUBLIC_DEFINED = "Keyword to Indicate whether the Data Are Public"
+\ ******************************************************************************
+\"TIME SERIES DATA BASIC PROPERTIES"
+\ ******************************************************************************
+\NUMBER_OF_POINTS = "88"
+\NUMBER_OF_POINTS_DEFINED = "Total Number of Data Points in Time Series"
+\TIME_REFERENCE_FRAME = "HJD"
+\TIME_REFERENCE_FRAME_DEFINED = "Frame of Reference of Time Series"
+\MINIMUM_DATE = "2455053.7298082"
+\MINIMUM_DATE_DEFINED = "Minimum Value of Date in Time Series Data (Mid-Exposure)"
+\MINIMUM_DATE_UNITS = "days"
+\MAXIMUM_DATE = "2455053.8213982"
+\MAXIMUM_DATE_DEFINED = "Maximum Value of Date in Time Series Data (Mid-Exposure)"
+\MAXIMUM_DATE_UNITS = "days"
+\MINIMUM_VALUE = "0.95974"
+\MINIMUM_VALUE_DEFINED = "Minimum Value of Time Series Data"
+\MINIMUM_VALUE_UNITS = "ratio"
+\MAXIMUM_VALUE = "1.005897"
+\MAXIMUM_VALUE_DEFINED = "Maximum Value of Time Series Data"
+\MAXIMUM_VALUE_UNITS = "ratio"
+\PERIOD = "3.092726"
+\PERIOD_DEFINED = "Published Orbital Period"
+\PERIOD_UNITS = "days"
+\ ******************************************************************************
+\"TIME SERIES DATA CHARACTERISTICS COMPUTED BY NSTED"
+\ ******************************************************************************
+\MEDIAN_VALUE = "    9.926e-01"
+\MEDIAN_VALUE_DEFINED = "Median Value of Data Points"
+\MEDIAN_VALUE_UNITS = "ratio"
+\MEAN_VALUE = "    9.885e-01"
+\MEAN_VALUE_DEFINED = "Mean Value of Data Points"
+\MEAN_VALUE_UNITS = "ratio"
+\MEDIAN_UNCERTAINTY = "    4.396e-03"
+\MEDIAN_UNCERTAINTY_DEFINED = "Median Value of Uncertainties Values"
+\MEDIAN_UNCERTAINTY_UNITS = "ratio"
+\MEDIAN_ABSOLUTE_DEVIATION = "    7.770e-03"
+\MEDIAN_ABSOLUTE_DEVIATION_DEFINED = "Value of Median Absolute Deviation Statistic"
+\MEDIAN_ABSOLUTE_DEVIATION_UNITS = "ratio"
+\DISPERSION = "    1.328e-02"
+\DISPERSION_DEFINED = "Standard Deviation with Respect to MEDIAN_VALUE"
+\DISPERSION_UNITS = "ratio"
+\CHISQUARED = "    8.274e+00"
+\CHISQUARED_DEFINED = "Value of Reduced Chi Squared Statistic with Respect to MEDIAN_VALUE"
+\NUMBER_5_SIGMA = "0"
+\NUMBER_5_SIGMA_DEFINED = "Number of Data Points beyond 5 times DISPERSION from MEDIAN_VALUE"
+\FRACTION_5_SIGMA = "    0.000e+00"
+\FRACTION_5_SIGMA_DEFINED = "Fraction of Data Points beyond 5 times DISPERSION from MEDIAN_VALUE"
+\ ******************************************************************************
+\"TIME SERIES DATA FITTING RESULTS"
+\ ******************************************************************************
+\FIT_TRANSIT_MIDPOINT = "2455053.72268"
+\FIT_TRANSIT_MIDPOINT_DEFINED = "Transit Center from Fit"
+\FIT_TRANSIT_MIDPOINT_UNITS = "days"
+\FIT_TRANSIT_DURATION = "2.1143"
+\FIT_TRANSIT_DURATION_DEFINED = "Duration of Transit (Beginning of Ingress until End of Egress) from Fit"
+\FIT_TRANSIT_DURATION_UNITS = "hours"
+\FIT_TRANSIT_DURATION_UNCERTAINTY = "0.15"
+\FIT_TRANSIT_DURATION_UNCERTAINTY_DEFINED = "Uncertainty in FIT_TRANSIT_DURATION"
+\FIT_TRANSIT_DURATION_UNCERTAINTY_UNITS = "hours"
+\FIT_TRANSIT_DEPTH = "34.550"
+\FIT_TRANSIT_DEPTH_DEFINED = "Depth of Transit from Fit"
+\FIT_TRANSIT_DEPTH_UNITS = "millimagnitude"
+\FIT_TRANSIT_DEPTH_UNCERTAINTY = " 2.60"
+\FIT_TRANSIT_DEPTH_UNCERTAINTY_DEFINED = "Uncertainty in FIT_TRANSIT_DEPTH"
+\FIT_TRANSIT_DEPTH_UNCERTAINTY_UNITS = "millimagnitude"
+\FIT_PARTIAL_TRANSIT_FRACTION = "0.310"
+\FIT_PARTIAL_TRANSIT_FRACTION_DEFINED = "Fraction of Transit that Is not Flat (i.e., Ingress plus Egress)"
+\FIT_PARTIAL_TRANSIT_FRACTION_UNCERTAINTY = "0.035"
+\FIT_PARTIAL_TRANSIT_FRACTION_UNCERTAINTY_DEFINED = "Uncertainty in FIT_PARTIAL_TRANSIT_FRACTION"
+\FIT_FRACTIONAL_TRANSIT_DEPTH_2ND_CONTACT = "0.820"
+\FIT_FRACTIONAL_TRANSIT_DEPTH_2ND_CONTACT_DEFINED = "Transit Depth at the End of Ingress Relative to Transit Depth at Transit Center (from Fit)"
+\FIT_FRACTIONAL_TRANSIT_DEPTH_2ND_CONTACT_UNCERTAINTY = "0.240"
+\FIT_FRACTIONAL_TRANSIT_DEPTH_2ND_CONTACT_UNCERTAINTY_DEFINED = "Uncertainty in FIT_FRACTIONAL_TRANSIT_DEPTH_2ND_CONTACT"
+\ ******************************************************************************
+\"REFERENCES AND INFORMATION ABOUT OBSERVING SETUP"
+\ ******************************************************************************
+\REFERENCES = "http://nsted.ipac.caltech.edu/NStED/docs/datasethelp/AXA.html"
+\REFERENCES_DEFINED = "Literature or Other References for Data"
+\TIME_SERIES_DATA_FILTER = "R"
+\TIME_SERIES_DATA_FILTER_DEFINED = "Filter in which Time Series Monitoring Was Performed"
+\OBSERVER_NAME = "WIGGINS, PATRICK (WPK)"							"
+\OBSERVER_EMAIL = "Not given"
+\OBSERVATORY_SITE = "UTAH"
+\OBSERVATORY_LATITUDE = "40.641							"
+\OBSERVATORY_LATITUDE_UNITS = "degrees"
+\OBSERVATORY_LONGITUDE = "-112.296							"
+\OBSERVATORY_LONGITUDE_UNITS = "degrees"
+\TELESCOPE_APERTURE = "0.35"
+\TELESCOPE_APERTURE_DEFINED = "Diameter of Telescope Aperture"
+\TELESCOPE_APERTURE_UNITS = "meters"
+\ ******************************************************************************
+\"DESCRIPTION OF COLUMN HEADERS"
+\ ******************************************************************************
+\COLUMN_HJD = "Heliocentric Julian Date of Observation"
+\COLUMN_RELATIVE_DATE = "Time with Respect to BASE_DATE"
+\COLUMN_PHASE = "Orbital Phase at Time of Observation"
+\COLUMN_RELATIVE_FLUX = "Flux Measurement Relative to Fiducial Value"
+\COLUMN_RELATIVE_FLUX_UNCERTAINTY = "Uncertainty in RELATIVE_FLUX"
+\COLUMN_RELATIVE_FLUX_WITHOUT_SYSTEMATICS = "RELATIVE_FLUX after Removal of Systematics"
+\COLUMN_DIFFERENCE_DATA_VS_MODEL = "Difference in Relative Flux between Data and Model"
+\COLUMN_MODEL_FIT = "Model Fit to Relative Flux Observations"
+\COLUMN_MODEL_FIT_WITHOUT_SYSTEMATICS = "Model Fit after Removal of Systematics"
+\COLUMN_AIRMASS = "Air mass = cos (Zenith Distance)"
+\ ******************************************************************************
+\"NSTED INTERNAL KEYWORDS (NEEDED FOR TIME SERIES VIEWER)"
+\ ******************************************************************************
+\X_AXIS = "HJD"
+\X_AXIS_UNITS = "days"
+\X_AXIS_UNCERTAINTY = "days"
+\Y_AXIS = "RELATIVE_FLUX_WITHOUT_SYSTEMATICS"
+\Y_AXIS_UNITS = "ratio"
+\Y_AXIS_UNCERTAINTY = "ratio"
+\ ******************************************************************************
+\"COMMENTS AND NOTES"
+\ ******************************************************************************
+\USE_OF_DATA1 =  "Downloading of amateur data files is unrestricted. However,"
+\USE_OF_DATA2 =  "since these data are unpublished, it is"
+\USE_OF_DATA3 =  "recommended the observer be contacted prior to use of data."
+\USE_OF_DATA4 =  "The observer may be aware of specific aspects of the data"
+\USE_OF_DATA5 =  "that should be taken into consideration when interpreted,"
+\USE_OF_DATA6 =  "such as seeing, clouds, wind, scintillation, "
+\USE_OF_DATA7 =  "clock-setting procedures, optimized photometry apertures, etc"
+\USE_OF_DATA8 =  "If these data are to be used in a publication,"
+\USE_OF_DATA9 =  "it is requested that the observer be acknowledged"
+\USE_OF_DATA10 =  "by name along with a brief description of the hardware used."
+\ ******************************************************************************
+\"NSTED ARCHIVE FILE INFORMATION"
+\ ******************************************************************************
+\NSTED_FILE_CREATION_DATE = "Tue Feb  2 23:50:14 2010 UTC"
+\CONTACT_LINK = "http://nsted.ipac.caltech.edu/applications/Helpdesk"
+\ ******************************************************************************
+\ ******************************************************************************
+|             HJD| RELATIVE_DATE|      PHASE| RELATIVE_FLUX| RELATIVE_FLUX_UNCERTAINTY| RELATIVE_FLUX_WITHOUT_SYSTEMATICS| DIFFERENCE_DATA_VS_MODEL| MODEL_FIT| MODEL_FIT_WITHOUT_SYSTEMATICS| AIRMASS|
+|          double|        double|     double|        double|                    double|                            double|                   double|    double|                        double|  double|
+|            days|          days|           |              |                          |                                  |                         |          |                              |        |
+  2455053.7298083      0.0071314  0.00230587       0.970406                   0.004396                           0.970439                 -0.001783   0.968679                       0.968712   1.5264 
+  2455053.7317183      0.0090414  0.00292344       0.967729                   0.004396                           0.967892                  0.001227   0.968918                       0.969081   1.5104 
+  2455053.7337383      0.0110614  0.00357659       0.973988                   0.004396                           0.974286                 -0.004831   0.969306                       0.969602   1.4949 
+  2455053.7347683      0.0120914  0.00390963       0.973091                   0.004396                           0.973456                 -0.003701   0.969503                       0.969866   1.4873 
+  2455053.7357983      0.0131214  0.00424267       0.964170                   0.004396                           0.964597                  0.005704   0.969701                       0.970130   1.4798 
+  2455053.7368283      0.0141514  0.00457571       0.970406                   0.004396                           0.970902                 -0.000517   0.969905                       0.970401   1.4725 
+  2455053.7378583      0.0151814  0.00490875       0.974885                   0.004396                           0.975449                 -0.004930   0.970103                       0.970664   1.4652 
+  2455053.7388783      0.0162014  0.00523856       0.964170                   0.004396                           0.964792                  0.006318   0.970301                       0.970927   1.4580 
+  2455053.7399083      0.0172314  0.00557160       0.976683                   0.004396                           0.977378                 -0.006373   0.970498                       0.971190   1.4509 
+  2455053.7409383      0.0182614  0.00590463       0.969513                   0.004396                           0.970276                  0.001212   0.970689                       0.971454   1.4416 
+  2455053.7419583      0.0192814  0.00623444       0.959740                   0.004396                           0.960559                  0.011488   0.970894                       0.971722   1.4347 
+  2455053.7429883      0.0203114  0.00656748       0.972195                   0.004460                           0.973089                 -0.001136   0.971092                       0.971984   1.4280 
+  2455053.7440183      0.0213414  0.00690052       0.968620                   0.004524                           0.969573                  0.002748   0.971290                       0.972246   1.4213 
+  2455053.7450483      0.0223714  0.00723356       0.976683                   0.004531                           0.977708                 -0.005341   0.971495                       0.972514   1.4147 
+  2455053.7460783      0.0234014  0.00756660       0.974885                   0.004607                           0.975971                 -0.003279   0.971699                       0.972782   1.4082 
+  2455053.7471383      0.0244614  0.00790934       0.965058                   0.004658                           0.966196                  0.007051   0.971911                       0.973057   1.4018 
+  2455053.7481683      0.0254914  0.00824238       0.970406                   0.004603                           0.971613                  0.001759   0.972116                       0.973325   1.3954 
+  2455053.7492083      0.0265314  0.00857865       0.973091                   0.004548                           0.974379                 -0.000813   0.972300                       0.973587   1.3851 
+  2455053.7502383      0.0275614  0.00891170       0.973091                   0.004483                           0.974440                 -0.000602   0.972505                       0.973854   1.3790 
+  2455053.7512783      0.0286014  0.00924796       0.974885                   0.004432                           0.976299                 -0.002236   0.972710                       0.974121   1.3729 
+  2455053.7523083      0.0296314  0.00958100       0.959740                   9.999999                           0.961191                  0.013542   0.972916                       0.974387   1.3670 
+  2455053.7533383      0.0306614  0.00991405       0.963282                   0.004281                           0.964799                  0.010555   0.973558                       0.975092   1.3611 
+  2455053.7543683      0.0316914  0.01024708       0.978484                   0.004216                           0.980085                 -0.003168   0.975394                       0.976990   1.3553 
+  2455053.7554083      0.0327314  0.01058336       0.979385                   0.004251                           0.981049                 -0.002182   0.977253                       0.978913   1.3496 
+  2455053.7564383      0.0337614  0.01091640       0.980288                   0.004142                           0.982013                 -0.001225   0.979088                       0.980811   1.3440 
+  2455053.7574683      0.0347914  0.01124943       0.975784                   0.004218                           0.977561                  0.005250   0.980934                       0.982720   1.3384 
+  2455053.7585083      0.0358314  0.01158571       0.989358                   0.004283                           0.991235                 -0.006677   0.982796                       0.984660   1.3293 
+  2455053.7595383      0.0368614  0.01191875       0.984813                   0.004209                           0.986740                 -0.000173   0.984642                       0.986569   1.3239 
+  2455053.7605683      0.0378914  0.01225178       0.983000                   0.004150                           0.984983                  0.003553   0.986505                       0.988495   1.3186 
+  2455053.7615983      0.0389214  0.01258483       0.990270                   0.004038                           0.992327                 -0.001928   0.988365                       0.990418   1.3134 
+  2455053.7626383      0.0399614  0.01292110       0.992096                   0.003939                           0.994216                 -0.001865   0.990249                       0.992365   1.3082 
+  2455053.7636683      0.0409914  0.01325414       0.988447                   0.003848                           0.990619                  0.003697   0.992115                       0.994295   1.3031 
+  2455053.7646983      0.0420214  0.01358718       0.998513                   0.003773                           1.000765                 -0.004548   0.993992                       0.996235   1.2981 
+  2455053.7657283      0.0430514  0.01392022       0.993010                   0.003764                           0.995309                  0.002868   0.995866                       0.998171   1.2931 
+  2455053.7667583      0.0440814  0.01425326       1.001276                   0.003701                           1.003652                 -0.003618   0.997666                       1.000034   1.2882 
+  2455053.7677883      0.0451114  0.01458630       0.994841                   0.003662                           0.997266                  0.002769   0.997603                       1.000035   1.2818 
+  2455053.7688183      0.0461414  0.01491934       1.002198                   0.003692                           1.004700                 -0.004663   0.997547                       1.000037   1.2770 
+  2455053.7698683      0.0471914  0.01525885       0.994841                   0.003651                           0.997383                  0.002650   0.997484                       1.000033   1.2723 
+  2455053.7708883      0.0482114  0.01558865       0.995758                   0.003600                           0.998359                  0.001674   0.997428                       1.000033   1.2677 
+  2455053.7719183      0.0492414  0.01592169       0.996675                   0.003530                           0.999336                  0.000698   0.997372                       1.000035   1.2631 
+  2455053.7729483      0.0502714  0.01625473       0.993010                   0.003451                           0.995718                  0.004317   0.997316                       1.000035   1.2586 
+  2455053.7739783      0.0513014  0.01658777       1.000354                   0.003371                           1.003139                 -0.003103   0.997259                       1.000036   1.2542 
+  2455053.7750083      0.0523314  0.01692080       0.993925                   0.003272                           0.996749                  0.003288   0.997203                       1.000036   1.2498 
+  2455053.7760283      0.0533514  0.01725062       0.998513                   0.003169                           1.001406                 -0.001369   0.997147                       1.000036   1.2454 
+  2455053.7770683      0.0543914  0.01758689       0.997593                   0.003128                           1.000551                 -0.000518   0.997077                       1.000033   1.2383 
+  2455053.7780983      0.0554214  0.01791993       1.004971                   0.003151                           1.008007                 -0.007974   0.997021                       1.000033   1.2342 
+  2455053.7791283      0.0564514  0.01825297       0.987538                   0.003188                           0.990576                  0.009456   0.996965                       1.000033   1.2300 
+  2455053.7801583      0.0574814  0.01858600       0.995758                   0.003340                           0.998876                  0.001155   0.996909                       1.000031   1.2260 
+  2455053.7811983      0.0585214  0.01892228       1.001276                   0.003556                           1.004468                 -0.004436   0.996853                       1.000031   1.2219 
+  2455053.7822283      0.0595514  0.01925532       0.996675                   0.003679                           0.999907                  0.000129   0.996804                       1.000037   1.2180 
+  2455053.7832583      0.0605814  0.01958836       0.996675                   0.003794                           0.999963                  0.000073   0.996748                       1.000036   1.2140 
+  2455053.7842983      0.0616214  0.01992464       0.996675                   0.003878                           1.000017                  0.000017   0.996692                       1.000034   1.2102 
+  2455053.7853283      0.0626514  0.02025767       1.004971                   0.003955                           1.008396                 -0.008363   0.996636                       1.000033   1.2064 
+  2455053.7863583      0.0636814  0.02059071       0.998513                   0.004020                           1.001975                 -0.001939   0.996580                       1.000035   1.2014 
+  2455053.7873883      0.0647114  0.02092375       0.991182                   0.004029                           0.994673                  0.005360   0.996524                       1.000033   1.1977 
+  2455053.7884283      0.0657514  0.02126002       0.993010                   0.004018                           0.996561                  0.003470   0.996468                       1.000031   1.1940 
+  2455053.7894583      0.0667814  0.02159307       1.004971                   0.003999                           1.008619                 -0.008583   0.996419                       1.000036   1.1904 
+  2455053.7904883      0.0678114  0.02192610       0.995758                   0.003968                           0.999425                  0.000608   0.996363                       1.000033   1.1869 
+  2455053.7915183      0.0688414  0.02225914       0.991182                   0.003929                           0.994886                  0.005150   0.996314                       1.000037   1.1834 
+  2455053.7925583      0.0698814  0.02259541       1.001276                   0.003889                           1.005071                 -0.005036   0.996258                       1.000034   1.1799 
+  2455053.7935883      0.0709114  0.02292846       0.996675                   0.003952                           1.000506                 -0.000475   0.996202                       1.000031   1.1765 
+  2455053.7946283      0.0719514  0.02326473       0.999433                   0.004013                           1.003336                 -0.003300   0.996146                       1.000037   1.1709 
+  2455053.7956683      0.0729914  0.02360100       0.993010                   0.004178                           0.996941                  0.003092   0.996090                       1.000033   1.1676 
+  2455053.7966983      0.0740214  0.02393404       0.997593                   0.004292                           1.001595                 -0.001559   0.996041                       1.000036   1.1644 
+  2455053.7977283      0.0750514  0.02426708       0.989358                   0.004425                           0.993379                  0.006653   0.995985                       1.000032   1.1612 
+  2455053.7987583      0.0760814  0.02460012       0.993010                   0.004404                           0.997097                  0.002938   0.995936                       1.000035   1.1581 
+  2455053.7997983      0.0771214  0.02493639       0.990270                   0.004428                           0.994398                  0.005633   0.995880                       1.000031   1.1549 
+  2455053.8008183      0.0781414  0.02526620       0.991182                   0.004591                           0.995365                  0.004668   0.995831                       1.000033   1.1519 
+  2455053.8018483      0.0791714  0.02559924       0.983906                   0.004861                           0.988108                  0.011926   0.995782                       1.000035   1.1489 
+  2455053.8028783      0.0802014  0.02593228       0.991182                   0.005261                           0.995467                  0.004570   0.995733                       1.000037   1.1459 
+  2455053.8039083      0.0812314  0.02626532       1.003122                   0.005585                           1.007513                 -0.007477   0.995677                       1.000036   1.1420 
+  2455053.8049383      0.0822614  0.02659836       0.995758                   0.006070                           1.000168                 -0.000137   0.995621                       1.000031   1.1391 
+  2455053.8059683      0.0832914  0.02693139       0.998513                   0.006444                           1.002986                 -0.002954   0.995572                       1.000033   1.1362 
+  2455053.8069983      0.0843214  0.02726444       1.004046                   0.006740                           1.008595                 -0.008561   0.995523                       1.000034   1.1334 
+  2455053.8080283      0.0853514  0.02759748       1.001276                   0.006835                           1.005863                 -0.005828   0.995474                       1.000035   1.1307 
+  2455053.8090583      0.0863814  0.02793051       0.990270                   0.006920                           0.994857                  0.005179   0.995425                       1.000037   1.1279 
+  2455053.8100783      0.0874014  0.02826032       0.996675                   0.006997                           1.001342                 -0.001305   0.995376                       1.000037   1.1252 
+  2455053.8111183      0.0884414  0.02859659       0.988447                   0.007363                           0.993126                  0.006905   0.995320                       1.000031   1.1226 
+  2455053.8121383      0.0894614  0.02892640       1.002198                   0.007363                           1.006992                 -0.006960   0.995271                       1.000032   1.1200 
+  2455053.8131683      0.0904914  0.02925944       1.005897                   9.999999                           1.010765                 -0.010733   0.995215                       1.000032   1.1157 
+  2455053.8141983      0.0915214  0.02959248       0.984813                   9.999999                           0.989628                  0.010404   0.995166                       1.000032   1.1132 
+  2455053.8152283      0.0925514  0.02992552       0.996675                   0.007363                           1.001598                 -0.001565   0.995117                       1.000032   1.1107 
+  2455053.8162583      0.0935814  0.03025856       0.990270                   9.999999                           0.995210                  0.004822   0.995068                       1.000032   1.1083 
+  2455053.8172883      0.0946114  0.03059160       1.003122                   0.007363                           1.008175                 -0.008143   0.995020                       1.000032   1.1059 
+  2455053.8183183      0.0956414  0.03092464       1.003122                   0.007363                           1.008225                 -0.008192   0.994971                       1.000032   1.1035 
+  2455053.8193483      0.0966714  0.03125768       1.004046                   0.007363                           1.009203                 -0.009171   0.994922                       1.000032   1.1012 
+  2455053.8203783      0.0977014  0.03159072       0.996675                   0.007363                           1.001843                 -0.001812   0.994873                       1.000031   1.0989 
+  2455053.8213983      0.0987214  0.03192053       0.996675                   0.007363                           1.001891                 -0.001854   0.994831                       1.000037   1.0967 

@@ -304,8 +304,16 @@ class ExoplanetPreprocessor:
         if self.feature_columns is None:
             raise ValueError("Preprocessor not fitted yet. Call fit_transform first.")
 
-        # Get features
-        X = df[self.feature_columns].copy()
+        # Create DataFrame with all required feature columns
+        # Fill missing columns with NaN (will be imputed later)
+        X = pd.DataFrame(index=df.index)
+        for col in self.feature_columns:
+            if col in df.columns:
+                X[col] = df[col]
+            else:
+                # Missing column - fill with NaN, will be imputed
+                X[col] = np.nan
+                logger.debug(f"Column '{col}' not in input, filling with NaN")
 
         # Handle missing values
         X = pd.DataFrame(

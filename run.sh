@@ -17,22 +17,13 @@ cleanup() {
 
 trap cleanup SIGINT SIGTERM
 
-# Check if virtual environment exists
-if [ ! -d "venv" ]; then
-    echo "❌ Virtual environment not found!"
-    echo "   Please run ./setup.sh first"
-    exit 1
-fi
-
-# Activate virtual environment
-source venv/bin/activate
+# Note: Using system Python installation (no venv required)
 
 # Start backend
 echo "🔧 Starting Backend API..."
-cd backend/api
-python main.py &
+python3 backend/api/main.py > logs/backend.log 2>&1 &
 BACKEND_PID=$!
-cd ../..
+echo "   Backend PID: $BACKEND_PID"
 
 # Wait for backend to start
 sleep 3

@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Rocket, Activity, Database, Settings, BarChart3 } from 'lucide-react';
+import { Rocket, Activity, Database, Settings, BarChart3, MessageSquare } from 'lucide-react';
 import Dashboard from './pages/Dashboard';
 import Predict from './pages/Predict';
 import Training from './pages/Training';
 import DataExplorer from './pages/DataExplorer';
 import Models from './pages/Models';
+import ChatAssistant from './pages/ChatAssistant';
 import { checkHealth } from './services/api';
 
 function App() {
@@ -85,6 +86,7 @@ function App() {
                 { id: 'training', icon: Activity, label: 'Training', path: '/training' },
                 { id: 'data', icon: Database, label: 'Data Explorer', path: '/data' },
                 { id: 'models', icon: Settings, label: 'Models', path: '/models' },
+                { id: 'chat', icon: MessageSquare, label: 'AI Assistant', path: '/chat' },
               ].map((item) => (
                 <Link
                   key={item.id}
@@ -112,6 +114,7 @@ function App() {
             <Route path="/training" element={<Training />} />
             <Route path="/data" element={<DataExplorer />} />
             <Route path="/models" element={<Models />} />
+            <Route path="/chat" element={<ChatAssistant />} />
           </Routes>
         </main>
 

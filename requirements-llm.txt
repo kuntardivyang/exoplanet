@@ -1,0 +1,15 @@
+# LLM and RAG Dependencies
+
+# Ollama
+ollama>=0.3.0
+
+# Vector Database
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+
+# LangChain (optional, for advanced features)
+langchain>=0.2.0
+langchain-community>=0.2.0
+
+# Additional utilities
+tiktoken>=0.7.0

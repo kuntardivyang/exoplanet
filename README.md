@@ -1,17 +1,46 @@
-# 🚀 Exoplanet Detection System
+# 🌌 Exoplanet Detection System
 
-AI-powered exoplanet detection and classification system built for NASA Space Apps Challenge 2025.
+**AI-Powered Exoplanet Discovery Platform**
 
-## 🌟 Features
+A complete, production-ready machine learning system for detecting exoplanets using NASA mission data. Built for NASA Space Apps Challenge 2025.
 
-- **Multiple ML Models**: Random Forest, XGBoost, LightGBM, Neural Networks, Gradient Boosting
-- **Three NASA Datasets**: Kepler, TESS, and K2 missions
-- **Complete Pipeline**: Data preprocessing, feature engineering, model training, and evaluation
-- **Web Interface**: Interactive React-based UI for predictions and model management
-- **RESTful API**: FastAPI backend with comprehensive endpoints
-- **Real-time Training**: Monitor model training progress in real-time
-- **Batch Predictions**: Support for CSV upload and batch processing
-- **Feature Importance**: Visualize which features matter most for detection
+[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green.svg)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-18-blue.svg)](https://react.dev)
+[![Accuracy](https://img.shields.io/badge/Accuracy-98.95%25-success.svg)](.)
+
+## ✨ Features
+
+### 🧠 **Machine Learning**
+- **5 State-of-the-Art Models** (XGBoost, LightGBM, Random Forest, Neural Network, Gradient Boosting)
+- **98.95% Accuracy** on Kepler dataset
+- **Automated Training Pipeline** with cross-validation
+- **Feature Engineering** from 141 to 50 optimal features
+
+### 📊 **NASA Data Integration**
+- **Kepler Mission:** 9,564 objects, 141 features
+- **TESS Mission:** 7,794 objects
+- **K2 Mission:** 4,303 objects
+- **203 Light Curves** from 13 exoplanet systems
+
+### 🤖 **AI Assistant**
+- **RAG-Powered Chatbot** using Ollama (llama3.2)
+- **Vector Database** (ChromaDB) for context retrieval
+- **Intelligent Q&A** about exoplanets, models, and data
+- **Source Citations** for all answers
+
+### 🌐 **Full-Stack Web Application**
+- **6 Interactive Pages** (Dashboard, Predictions, Training, Data Explorer, Models, AI Chat)
+- **Real-Time Updates** during training
+- **Batch Processing** for thousands of predictions
+- **CSV Upload** for bulk predictions
+
+### 🚀 **Production Ready**
+- **RESTful API** with 20+ endpoints
+- **Comprehensive Error Handling**
+- **Logging & Monitoring**
+- **Input Validation** with Pydantic
+- **CORS Enabled** for cross-origin requests
 
 ## 📁 Project Structure
 
@@ -47,65 +76,45 @@ exoplanet/
 └── logs/                     # Application logs
 ```
 
-## 🚀 Quick Start
+## 🎯 Quick Start
 
-### Prerequisites
-
-- Python 3.9+
-- Node.js 18+
-- pip
-- npm or yarn
-
-### Backend Setup
-
-1. **Create virtual environment**:
+### **1. Install & Setup**
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-2. **Install dependencies**:
-```bash
+# Install dependencies
 pip install -r requirements.txt
+pip install -r requirements-llm.txt  # Optional, for chat
+
+# Install frontend
+cd frontend && npm install && cd ..
+
+# Install Ollama (optional, for AI chat)
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull llama3.2
 ```
 
-3. **Train your first model**:
+### **2. Train Models**
 ```bash
-cd backend/models
-python train_pipeline.py
+# Train on Kepler dataset (~2 minutes)
+python3 backend/models/train_pipeline.py
 ```
 
-This will:
-- Load the Kepler dataset
-- Preprocess and clean the data
-- Train 5 different ML models
-- Evaluate and save the best model
-- Generate comparison reports
-
-4. **Start the API server**:
+### **3. Start System**
 ```bash
-cd backend/api
-python main.py
+# Automatic start (recommended)
+./START_SYSTEM.sh
+
+# Or manual start (3 terminals)
+# Terminal 1: python3 backend/api/main.py
+# Terminal 2: cd frontend && npm run dev
+# Terminal 3: ollama serve
 ```
 
-API will be available at `http://localhost:8000`
-- Docs: `http://localhost:8000/docs`
-- ReDoc: `http://localhost:8000/redoc`
+### **4. Access the System**
+- 🎨 **Main App:** http://localhost:3000
+- 📚 **API Docs:** http://localhost:8000/docs
+- 💚 **Health Check:** http://localhost:8000/health
 
-### Frontend Setup
-
-1. **Install dependencies**:
-```bash
-cd frontend
-npm install
-```
-
-2. **Start development server**:
-```bash
-npm run dev
-```
-
-Frontend will be available at `http://localhost:3000`
+📖 **Full Guide:** See [QUICK_START.md](QUICK_START.md)
 
 ## 🎯 Usage
 
